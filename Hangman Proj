@@ -1,1 +1,58 @@
-// comments
+// Walker and Wesley 2022.11.22 Hangman Project
+// Set constants boolean userContinuesPlaying = true;
+    public static void main(String [] args) {
+        public static void setRules() {
+        System.out.println("*insert game instruction*");
+        // gives user instructions on how to play game MAKE SURE TO ADD INSTRUCTIONS
+        String[] wordList = readWordList(
+                "/users/WalkerPeterson/Downloads/words81520.csv",81520);
+        while (userContinuesPlaying) {
+         int n = (int) (Math.random() * 81520);
+         // gives a random integer less than 81521
+         
+                
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // keep all this at the bottom until we finish project
+import java.io.FileReader;
+import java.util.Scanner;
+public class Project {
+    // provided by Mr. Hansen
+    public static String[] readWordList(String pathAndFileName, int wordListSize) {
+        String[] tempArray = new String[wordListSize];
+        try {
+            Scanner scfile = new Scanner(new FileReader(pathAndFileName));
+            for(int i = 0; i < wordListSize; i++) {
+                tempArray[i] = scfile.nextLine();
+            }
+            scfile.close();
+        } catch (Exception e) {
+            System.out.println("Exception " + e);
+        }
+        return tempArray;

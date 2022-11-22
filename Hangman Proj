@@ -1,5 +1,7 @@
 // Walker and Wesley 2022.11.22 Hangman Project
-// Set constants boolean userContinuesPlaying = true;
+// Set constants 
+boolean userContinuesPlaying = true;
+final int MAX_PENALTY_STROKE = 5;
     public static void main(String [] args) {
         public static void setRules() {
         System.out.println("*insert game instruction*");

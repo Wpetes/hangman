@@ -1,37 +1,81 @@
 // Walker and Wesley 2022.11.22 Hangman Project
-// Set constants 
-boolean userContinuesPlaying = true;
-final int MAX_PENALTY_STROKE = 5;
-    public static void main(String [] args) {
-        public static void setRules() {
-        System.out.println("*insert game instruction*");
-        // gives user instructions on how to play game MAKE SURE TO ADD INSTRUCTIONS
-        String[] wordList = readWordList(
-                "/users/WalkerPeterson/Downloads/words81520.csv",81520);
-        while (userContinuesPlaying) {
-         int n = (int) (Math.random() * 81520);
-         // gives a random integer less than 81521
-         
-                
-NEW CODE DONE 11/25     
+import java.io.FileReader;
+import java.util.Scanner;
 import java.util.*;
-public class Tester{
-    public static void WantToPlay(boolean){
-        System.out.print("Do you want to play" +'\n + Press Y to continue +\n+ Press N to stop");
-        Scanner.in= new Scanner(System.in);
-            if (System.in==char Y){
+public class GitHub1 {
+    public static void main(String [] args) {
+        boolean userContinuesPlaying = true;
+        //keeps main while loop running
+        final int MAX_PENALTY_STROKES = 5;
+        //penalty stroke limit
+        char[] wordFound;
+        //Finds letters of target word array
+        int errorsMade;
+        //counts errors made by user
+        ArrayList<String> letters = new ArrayList<String>();
+        // keeps track of letters guessed
+        char c;
+
+        public static void WantToPlay(boolean){
+                System.out.print("Do you want to play" +'\n + Press Y to continue +\n+ Press N to stop");
+                        Scanner.in= new Scanner(System.in);
+        if (System.in==char Y){
             System.out.print("Rules: '\n " +
                     "1. Vowels are invalid guesses, doing so will result in a penalty strike \n" +
                     "2. Every time you guess an incorrect letter a penalty strike will be given \n" +
                     "3. Once you reach the maximum amount of penalty strikes the game will end");
-            //guess code
+            //reads instructions to user
         }
         if else(){
             System.out.print("thank you for playing");
-                //terminate code (need code for this)
+            //terminate code (need code for this)
         }
+        }
+        String[] wordList = readWordList(
+                "/users/WalkerPeterson/Downloads/words81520.csv",
+                81520);
+        while (userContinuesPlaying) {       // main while loop
+            errorsMade = 0;
+            //counts errors made this round
+            letters.clear();
+            // clears letters for new game
+            int n = (int) (Math.random() * 81520);
+            String wordToFind = wordList[n];
+            //finds target word
+
+            //word found initialization
+            wordFound = new char[wordToFind.length()];
+            for(int k = 0; k <wordFound.length; k++) {
+                wordFound[k] = '_';
+                System.out.println(wordFound[k]);
+
+            }
+            // find out if target word was guessed
+            public static boolean correctGuess() {
+                wordToFind.contentEquals(String.valueOf(correctGuess));
+                return;
+
+
+            }
+            // read entered variables
+            public static void enter(String c);
+                Scanner letterGuessed = new Scanner(System.in);   //accepts users guess
+                String Guess = letterGuessed.nextLine();
+                System.out.println("you guessed: " + letterGuessed);    //tells user what they guessed
+                if(!letters.contains(c)) {
+                    if(wordToFind.contains(c)) {
+                        int index = wordToFind.indexOf(c);
+
+                    }else {
+
+                    }
+                }
+
+
+
+        }
+
     }
-}
 
     
     
